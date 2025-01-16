@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    padding: 10px 20px;
+    font: bold 24px/40px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    color: #FFF;
+    background-color: #007F7C;
+    flex: 0 0 auto;
+}
+.title {
+    display: flex;
+}
+.logo {
+    flex: 1 1 auto;
+}
+.logo i {
+    margin-right: 10px;
+}
+.github {
+    width: 23px;
+    flex: 0 0 auto;
+}
+.github > i {
+    cursor: pointer;
+}
+.toggle {
+    width: 21px;
+    margin-left: 20px;
+    flex: 0 0 auto;
+}
+.toggle > i {
+    cursor: pointer;
+}
+.config-container {
+    width: 100%;
+    height: 0;
+    position: relative;
+    overflow: hidden;
+    transition: height 300ms;
+}
+.config {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 160px;
+    display: flex;
+}
+.form {
+    flex: 1 1 auto;
+}
+.form > div {
+    width: 100%;
+    padding: 5px 0;
+    line-height: 30px;
+}
+.form > div > select {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.form > div > input {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.position {
+    display: flex;
+}
+.position > div:first-child {
+    width: 30px;
+    margin-right: 10px;
+    flex: 0 0 auto;
+}
+.position > div:not(:first-child):not(:last-child) {
+    margin-right: 10px;
+    flex: 1 1 auto;
+}
+.position > div:last-child {
+    width: 24px;
+    flex: 0 0 auto;
+    text-align: center;
+}
+.position > div > input {
+    width: 100%;
+    height: 30px;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.position > div > i {
+    cursor: pointer;
+}
+.submit {
+    height: 160px;
+    width: 60px;
+    margin-left: 20px;
+    line-height: 160px;
+    text-align: center;
+}
+.submit > div > i {
+    cursor: pointer;
+}
+.content {
+    width: 100%;
+    flex: 1 1 auto;
+}
