@@ -64,6 +64,7 @@ const matchLang = location.search.match(/lang=(.*?)(?:&|$)/),
         container: 'map',
         dataUrl: 'data',
         accessToken: 'pk.eyJ1IjoibmFnaXgiLCJhIjoiY201emxlbGhkMDRqYjJxc2IzMnF0dzk5aCJ9.OxzbAxJoC_Myy13ypJ4EeA',
+        searchControl: false,
         modeControl: false,
         plugins: [mt3dPrecipitation()]
     };
