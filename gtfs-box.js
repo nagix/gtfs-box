@@ -17,6 +17,15 @@ const SOURCES = [{
     bearing: 0,
     pitch: 60
 }, {
+    label: '京成トランジットバス (浦安)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/KeiseiTransitBus/AllLines.zip?date=current',
+    vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_KeiseiTransitBus_AllLines_vehicle',
+    color: '#CC0000',
+    zoom: 14,
+    center: [139.89324, 35.6659],
+    bearing: 0,
+    pitch: 60
+}, {
     label: '拓殖バス (帯広)',
     gtfsUrl: 'https://api.odpt.org/api/v4/files/odpt/HokkaidoTakushokuBus/Takusyoku_regular_line.zip?date=current',
     vehiclePositionUrl: 'https://api.odpt.org/api/v4/gtfs/realtime/odpt_HokkaidoTakushokuBus_Takusyoku_regular_line_vehicle',
@@ -35,6 +44,51 @@ const SOURCES = [{
     bearing: 0,
     pitch: 60
 }, {
+    label: '永井バス (前橋)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/NagaiTransportation/AllLines.zip?date=current',
+    vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_NagaiTransportation_AllLines_vehicle',
+    color: '256445',
+    zoom: 14,
+    center: [139.07263, 36.38314],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '京福バス (福井)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/KeifukuBus/keifuku_rosen.zip?date=current',
+    vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_KeifukuBus_keifuku_rosen_vehicle',
+    color: '75191C',
+    zoom: 14,
+    center: [136.22333, 36.06156],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '宇野バス (岡山)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/UnoBus/AllLines.zip?date=current',
+    vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_UnoBus_AllLines_vehicle',
+    color: '504A3D',
+    zoom: 14,
+    center: [133.91767, 34.66603],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '船鉄バス (宇部)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/SentetsuBus/AllLines.zip?date=current',
+    vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_SentetsuBus_AllLines_vehicle',
+    color: 'E83330',
+    zoom: 14,
+    center: [131.22167, 34.0027],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'North Central Regional Transit District (Santa Fe, New Mexico, USA)',
+    gtfsUrl: 'https://bluebustracker.availtec.com/InfoPoint/GTFS-Zip.ashx',
+    vehiclePositionUrl: 'https://bluebustracker.availtec.com/InfoPoint/GTFS-Realtime.ashx?Type=VehiclePosition',
+    color: '3170B5',
+    zoom: 14,
+    center: [-105.93851, 35.68743],
+    bearing: 0,
+    pitch: 60
+}, {
     label: 'Tompkins Consolidated Area Transit (Ithaca, New York, USA)',
     gtfsUrl: 'https://realtimetcatbus.availtec.com/InfoPoint/GTFS-Zip.ashx',
     vehiclePositionUrl: 'https://realtimetcatbus.availtec.com/InfoPoint/GTFS-Realtime.ashx?&Type=VehiclePosition&serverid=0',
@@ -50,6 +104,15 @@ const SOURCES = [{
     color: '2D3F8B',
     zoom: 14,
     center: [-120.31254, 47.42591],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'Manatee County Area Transit (Wenatchee, Washington, USA)',
+    gtfsUrl: 'https://realtimemcat.availtec.com/InfoPoint/GTFS-Zip.ashx',
+    vehiclePositionUrl: 'https://realtimemcat.availtec.com/InfoPoint/GTFS-Realtime.ashx?Type=VehiclePosition',
+    color: '8BC9CD',
+    zoom: 14,
+    center: [-82.57115, 27.49714],
     bearing: 0,
     pitch: 60
 }];
