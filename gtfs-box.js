@@ -107,7 +107,7 @@ const SOURCES = [{
     bearing: 0,
     pitch: 60
 }, {
-    label: 'Manatee County Area Transit (Wenatchee, Washington, USA)',
+    label: 'Manatee County Area Transit (Bradenton, Florida, USA)',
     gtfsUrl: 'https://realtimemcat.availtec.com/InfoPoint/GTFS-Zip.ashx',
     vehiclePositionUrl: 'https://realtimemcat.availtec.com/InfoPoint/GTFS-Realtime.ashx?Type=VehiclePosition',
     color: '8BC9CD',
