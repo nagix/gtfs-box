@@ -45,6 +45,28 @@ No | Description | 説明
 19 | Hover the mouse over a GTFS vehicle to display details | GTFS車両にマウスを当てると詳細表示
 20 | The list of stops and departure times of the vehicle | GTFS車両の停留所と発車時刻のリスト
 
+## About Data / データについて
+
+The source of the public transportation data in this app is the [Public Transportation Open Data Center](https://www.odpt.org). They are based on the data provided by the public transportation operators. The accuracy and integrity of the data are not guaranteed. Please do not contact the public transportation operators directly regarding the content of the app.
+
+- Bureau of Transportation, Tokyo Metropolitan Government / Association for Open Data of Public Transportation, Bus information of Bureau of Transportation, Tokyo Metropolitan Government, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
+- Keisei Transit Bus Co.,Ltd., KEISEI TRANSIT BUS, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
+- Aomori City, Aomori City Bus information, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
+- Nagai Transportation Co., Ltd., Nagai Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
+- Keifuku Bus Co., Ltd., Keifuku Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
+- UNOBUS, UNOBUS GTFS, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
+- Funaki Tetsudou Corporation, Funatetsu Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
+
+本アプリケーションが利用する公共交通データは、[公共交通オープンデータセンター](https://www.odpt.org\" )において提供されるものです。公共交通事業者により提供されたデータを元にしていますが、必ずしも正確・完全なものとは限りません。本アプリケーションの表示内容について、公共交通事業者への直接の問合せは行わないでください。
+
+- 東京都交通局・公共交通オープンデータ協議会、東京都交通局 バス関連情報、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
+- 京成トランジットバス株式会社、京成トランジットバス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
+- 青森市企業局交通部、青森市営バス路線情報、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
+- 永井運輸株式会社、永井バス（永井運輸株式会社）、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
+- 京福バス株式会社、京福バス（路線バス）、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
+- 宇野自動車株式会社、宇野自動車（路線バス）、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
+- 船木鉄道株式会社、船鉄バス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
+
 ## License / ライセンス
 
 GTFS box is available under the [MIT license](https://opensource.org/licenses/MIT).
