@@ -117,6 +117,10 @@ const SOURCES = [{
     pitch: 60
 }];
 
+function numberOrDefault(value, defaultValue) {
+    return isNaN(Number(value)) || isNaN(parseFloat(value)) ? defaultValue : +value;
+}
+
 const matchLang = location.search.match(/lang=(.*?)(?:&|$)/),
     matchIndex = location.search.match(/index=(.*?)(?:&|$)/),
     matchGtfsUrl = location.search.match(/gtfsurl=(.*?)(?:&|$)/),
@@ -151,10 +155,10 @@ if (matchHash[4]) {
 if (matchHash[5]) {
     options.pitch = +matchHash[5];
 }
-if (matchGtfsUrl && matchVehiclePositionUrl && matchGtfsColor) {
+if (matchGtfsUrl && matchGtfsColor) {
     options.dataSources = [{
         gtfsUrl: decodeURIComponent(matchGtfsUrl[1]),
-        vehiclePositionUrl: decodeURIComponent(matchVehiclePositionUrl[1]),
+        vehiclePositionUrl: matchVehiclePositionUrl ? decodeURIComponent(matchVehiclePositionUrl[1]) : undefined,
         color: `#${decodeURIComponent(matchGtfsColor[1])}`
     }];
 } else if (initialIndex === undefined) {
@@ -185,7 +189,7 @@ function setValues(index, options) {
         return;
     }
     gtfsUrlElement.value = options.dataSources[0].gtfsUrl;
-    vehiclePositionUrlElement.value = options.dataSources[0].vehiclePositionUrl;
+    vehiclePositionUrlElement.value = options.dataSources[0].vehiclePositionUrl !== undefined ? options.dataSources[0].vehiclePositionUrl : '';
     colorElement.value = options.dataSources[0].color;
     zoomElement.value = options.zoom !== undefined ? options.zoom : '';
     latitudeElement.value = options.center[1] !== undefined ? options.center[1] : '';
@@ -195,15 +199,13 @@ function setValues(index, options) {
 }
 
 const selectElement = document.getElementById('select'),
-    custom = initialIndex >= 0 ? '' : '<option selected>Custom</option>';
+    custom = initialIndex >= 0 ? '' : '<option value="" selected>Custom</option>';
 
 selectElement.innerHTML = custom + SOURCES.map(
     (source, i) => `<option value="${i}"${i === initialIndex ? ' selected': ''}>${source.label}</option>`
 ).join('');
 selectElement.addEventListener('input', e => {
-    if (+e.target.value >= 0) {
-        setValues(+e.target.value);
-    }
+    setValues(numberOrDefault(e.target.value, undefined), options);
 });
 setValues(initialIndex, options);
 
@@ -245,21 +247,22 @@ document.getElementById('load').addEventListener('click', e => {
         gtfsUrl = gtfsUrlElement.value,
         vehiclePositionUrl = vehiclePositionUrlElement.value,
         color = colorElement.value.slice(1).toUpperCase(),
-        zoom = +zoomElement.value,
-        latitude = +latitudeElement.value,
-        longitude = +longitudeElement.value,
-        bearing = +bearingElement.value,
-        pitch = +pitchElement.value,
+        zoom = numberOrDefault(zoomElement.value, 14),
+        latitude = numberOrDefault(latitudeElement.value, 35.6814),
+        longitude = numberOrDefault(longitudeElement.value, 139.7670),
+        bearing = numberOrDefault(bearingElement.value, 0),
+        pitch = numberOrDefault(pitchElement.value, 60),
         langParam = options.lang ? `lang=${options.lang}&` : '';
-        indexParam = gtfsUrl === source.gtfsUrl &&
+        indexParam = source &&
+            gtfsUrl === source.gtfsUrl &&
             vehiclePositionUrl === source.vehiclePositionUrl &&
             color === source.color &&
             zoom === source.zoom &&
             latitude === source.center[1] &&
             longitude === source.center[0] &&
             bearing === source.bearing &&
-            pitch === source.pitch ?`index=${index}&` : '',
-        params = `gtfsurl=${encodeURIComponent(gtfsUrl)}&gtfsvpurl=${encodeURIComponent(vehiclePositionUrl)}&gtfscolor=${color}#${zoom}/${latitude}/${longitude}/${bearing}/${pitch}`;
+            pitch === source.pitch ? `index=${index}&` : '',
+        params = `gtfsurl=${encodeURIComponent(gtfsUrl)}${vehiclePositionUrl ? `&gtfsvpurl=${encodeURIComponent(vehiclePositionUrl)}` : ''}&gtfscolor=${color}#${zoom}/${latitude}/${longitude}/${bearing}/${pitch}`;
 
     window.location.href = `./?${langParam}${indexParam}${params}`;
 });
