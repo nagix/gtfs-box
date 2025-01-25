@@ -20,7 +20,7 @@ const SOURCES = [{
     label: '京成トランジットバス (浦安)',
     gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/KeiseiTransitBus/AllLines.zip?date=current',
     vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_KeiseiTransitBus_AllLines_vehicle',
-    color: '#CC0000',
+    color: 'CC0000',
     zoom: 14,
     center: [139.89324, 35.6659],
     bearing: 0,
