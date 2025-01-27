@@ -10,6 +10,11 @@ See a [Live Demo](https://nagix.github.io/gtfs-box).
 
 [ライブデモ](https://nagix.github.io/gtfs-box)をご覧ください。
 
+## Demo Video / デモ映像
+
+- [Demo Video (English)](https://youtu.be/VEeys6Nt4Ec)
+- [Demo Video (Japanese)](https://youtu.be/raGNOVIehGo)
+
 ## How to Use / 使い方
 
 GTFS box allows you to view one operator's routes and operating vehicles at a time. First, click/tap the “v” button (13) in the upper right corner of the screen to display the settings panel. Select pre-registered data from the preset operator menu (1) or enter the URL of the GTFS zip file (2), URL of the GTFS Realtime VehiclePosition (3), operator's color (4), zoom level (5), latitude (6), longitude (7), bearing (8), and pitch (9) individually, then click/tap the load button (11) to display the data on the map.
