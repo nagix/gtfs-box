@@ -35,6 +35,15 @@ const SOURCES = [{
     bearing: 0,
     pitch: 60
 }, {
+    label: '函館市電 (函館)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/HakodateCity/Alllines.zip?date=current',
+    vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_HakodateCity_Alllines_vehicle',
+    color: '204E9C',
+    zoom: 14,
+    center: [140.72784, 41.77222],
+    bearing: 0,
+    pitch: 60
+}, {
     label: '青森市営バス (青森)',
     gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/AomoriCity/AllLines.zip?date=current',
     vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_AomoriCity_AllLines_vehicle',
@@ -48,6 +57,15 @@ const SOURCES = [{
     gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/NagaiTransportation/AllLines.zip?date=current',
     vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_NagaiTransportation_AllLines_vehicle',
     color: '256445',
+    zoom: 14,
+    center: [139.07263, 36.38314],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '日本中央バス (前橋)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/NipponChuoBus/Maebashi_Area.zip?date=current',
+    vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_NipponChuoBus_Maebashi_Area_vehicle',
+    color: 'D1AC4B',
     zoom: 14,
     center: [139.07263, 36.38314],
     bearing: 0,
@@ -68,6 +86,15 @@ const SOURCES = [{
     color: '504A3D',
     zoom: 14,
     center: [133.91767, 34.66603],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '下津井バス (倉敷)',
+    gtfsUrl: 'https://api.odpt.org/api/v4/files/odpt/Shimoden/Shimoden_BUS_GTFS_Realtime.zip?date=current',
+    vehiclePositionUrl: 'https://api.odpt.org/api/v4/gtfs/realtime/odpt_Shimoden_Shimoden_BUS_GTFS_Realtime_vehicle',
+    color: 'FF1004',
+    zoom: 14,
+    center: [133.76603, 34.60103],
     bearing: 0,
     pitch: 60
 }, {
@@ -113,6 +140,42 @@ const SOURCES = [{
     color: '8BC9CD',
     zoom: 14,
     center: [-82.57115, 27.49714],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'Shenango Valley Shuttle Service (Sharon, Pennsylvania, USA)',
+    gtfsUrl: 'https://svss.availtec.com/InfoPoint/gtfs-zip.ashx',
+    vehiclePositionUrl: 'https://svss.availtec.com/InfoPoint/GTFS-Realtime.ashx?Type=VehiclePosition',
+    color: '050575',
+    zoom: 14,
+    center: [-80.50875, 41.23285],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'Altoona Metro Transit (Altoona, Pennsylvania, USA)',
+    gtfsUrl: 'https://amtran.rideralerts.com/InfoPoint/gtfs-zip.ashx',
+    vehiclePositionUrl: 'https://amtran.rideralerts.com/InfoPoint/GTFS-Realtime.ashx?Type=VehiclePosition',
+    color: '51B08B',
+    zoom: 14,
+    center: [-78.40189, 40.51472],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'Indiana County Transit Authority (Indiana, Pennsylvania, USA)',
+    gtfsUrl: 'https://indigobus.availtec.com/InfoPoint/gtfs-zip.ashx',
+    vehiclePositionUrl: 'https://indigobus.availtec.com/InfoPoint/GTFS-Realtime.ashx?Type=VehiclePosition',
+    color: '94C01F',
+    zoom: 14,
+    center: [-79.15336, 40.62295],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'Carris (Lisbon, Portugal)',
+    gtfsUrl: 'https://gateway.carris.pt/gateway/gtfs/api/v2.8/GTFS',
+    vehiclePositionUrl: 'https://gateway.carris.pt/gateway/gtfs/api/v2.8/GTFS/realtime/vehiclepositions',
+    color: 'FFD301',
+    zoom: 14,
+    center: [-9.14172, 38.71549],
     bearing: 0,
     pitch: 60
 }];
