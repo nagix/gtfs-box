@@ -107,12 +107,21 @@ const SOURCES = [{
     bearing: 0,
     pitch: 60
 }, {
-    label: 'North Central Regional Transit District (Santa Fe, New Mexico, USA)',
-    gtfsUrl: 'https://bluebustracker.availtec.com/InfoPoint/GTFS-Zip.ashx',
-    vehiclePositionUrl: 'https://bluebustracker.availtec.com/InfoPoint/GTFS-Realtime.ashx?Type=VehiclePosition',
-    color: '3170B5',
+    label: 'Carris (Lisbon, Portugal)',
+    gtfsUrl: 'https://gateway.carris.pt/gateway/gtfs/api/v2.8/GTFS',
+    vehiclePositionUrl: 'https://gateway.carris.pt/gateway/gtfs/api/v2.8/GTFS/realtime/vehiclepositions',
+    color: 'FFD301',
     zoom: 14,
-    center: [-105.93851, 35.68743],
+    center: [-9.14172, 38.71549],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'MRC du Haut-Saint-Laurent (Huntingdon, Canada)',
+    gtfsUrl: 'https://gtfs-rt.infra-hubup.fr/mrchsl/current/revision/gtfs',
+    vehiclePositionUrl: 'https://gtfs-rt.infra-hubup.fr/mrchsl/realtime',
+    color: '1C94C6',
+    zoom: 14,
+    center: [-74.17316, 45.0872],
     bearing: 0,
     pitch: 60
 }, {
@@ -122,33 +131,6 @@ const SOURCES = [{
     color: '509FD3',
     zoom: 14,
     center: [-76.49709, 42.43962],
-    bearing: 0,
-    pitch: 60
-}, {
-    label: 'Link Transit (Wenatchee, Washington, USA)',
-    gtfsUrl: 'https://link.rideralerts.com/InfoPoint/gtfs-zip.ashx',
-    vehiclePositionUrl: 'https://link.rideralerts.com/InfoPoint/GTFS-Realtime.ashx?Type=VehiclePosition',
-    color: '2D3F8B',
-    zoom: 14,
-    center: [-120.31254, 47.42591],
-    bearing: 0,
-    pitch: 60
-}, {
-    label: 'Manatee County Area Transit (Bradenton, Florida, USA)',
-    gtfsUrl: 'https://realtimemcat.availtec.com/InfoPoint/GTFS-Zip.ashx',
-    vehiclePositionUrl: 'https://realtimemcat.availtec.com/InfoPoint/GTFS-Realtime.ashx?Type=VehiclePosition',
-    color: '8BC9CD',
-    zoom: 14,
-    center: [-82.57115, 27.49714],
-    bearing: 0,
-    pitch: 60
-}, {
-    label: 'Shenango Valley Shuttle Service (Sharon, Pennsylvania, USA)',
-    gtfsUrl: 'https://svss.availtec.com/InfoPoint/gtfs-zip.ashx',
-    vehiclePositionUrl: 'https://svss.availtec.com/InfoPoint/GTFS-Realtime.ashx?Type=VehiclePosition',
-    color: '050575',
-    zoom: 14,
-    center: [-80.50875, 41.23285],
     bearing: 0,
     pitch: 60
 }, {
@@ -170,12 +152,66 @@ const SOURCES = [{
     bearing: 0,
     pitch: 60
 }, {
-    label: 'Carris (Lisbon, Portugal)',
-    gtfsUrl: 'https://gateway.carris.pt/gateway/gtfs/api/v2.8/GTFS',
-    vehiclePositionUrl: 'https://gateway.carris.pt/gateway/gtfs/api/v2.8/GTFS/realtime/vehiclepositions',
-    color: 'FFD301',
+    label: 'Shenango Valley Shuttle Service (Sharon, Pennsylvania, USA)',
+    gtfsUrl: 'https://svss.availtec.com/InfoPoint/gtfs-zip.ashx',
+    vehiclePositionUrl: 'https://svss.availtec.com/InfoPoint/GTFS-Realtime.ashx?Type=VehiclePosition',
+    color: '050575',
     zoom: 14,
-    center: [-9.14172, 38.71549],
+    center: [-80.50875, 41.23285],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'Western Reserve Transit Authority (Youngstown, Ohio, USA)',
+    gtfsUrl: 'https://myvalleystops.wrtaonline.com/InfoPoint/gtfs-zip.ashx',
+    vehiclePositionUrl: 'https://myvalleystops.wrtaonline.com/infopoint/GTFS-Realtime.ashx?Type=VehiclePosition',
+    color: '60B257',
+    zoom: 14,
+    center: [-80.64936, 41.10006],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'Manatee County Area Transit (Bradenton, Florida, USA)',
+    gtfsUrl: 'https://realtimemcat.availtec.com/InfoPoint/GTFS-Zip.ashx',
+    vehiclePositionUrl: 'https://realtimemcat.availtec.com/InfoPoint/GTFS-Realtime.ashx?Type=VehiclePosition',
+    color: '8BC9CD',
+    zoom: 14,
+    center: [-82.57115, 27.49714],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'Minnesota Valley Transit Authority (Burnsville, Minnesota, USA)',
+    gtfsUrl: 'http://srv.mvta.com/InfoPoint/GTFS-Zip.ashx',
+    vehiclePositionUrl: 'https://srv.mvta.com/infoPoint/GTFS-realtime.ashx?Type=VehiclePosition',
+    color: '00553D',
+    zoom: 14,
+    center: [-93.28588, 44.74302],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'North Central Regional Transit District (Santa Fe, New Mexico, USA)',
+    gtfsUrl: 'https://bluebustracker.availtec.com/InfoPoint/GTFS-Zip.ashx',
+    vehiclePositionUrl: 'https://bluebustracker.availtec.com/InfoPoint/GTFS-Realtime.ashx?Type=VehiclePosition',
+    color: '3170B5',
+    zoom: 14,
+    center: [-105.93851, 35.68743],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'Link Transit (Wenatchee, Washington, USA)',
+    gtfsUrl: 'https://link.rideralerts.com/InfoPoint/gtfs-zip.ashx',
+    vehiclePositionUrl: 'https://link.rideralerts.com/InfoPoint/GTFS-Realtime.ashx?Type=VehiclePosition',
+    color: '2D3F8B',
+    zoom: 14,
+    center: [-120.31254, 47.42591],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'Stanislaus Regional Transit (Modesto, California, USA)',
+    gtfsUrl: 'https://stanrta.rideralerts.com/InfoPoint/gtfs-zip.ashx',
+    vehiclePositionUrl: 'https://stanrta.rideralerts.com/InfoPoint/GTFS-Realtime.ashx?Type=VehiclePosition',
+    color: '2B456F',
+    zoom: 14,
+    center: [-121.00104, 37.63909],
     bearing: 0,
     pitch: 60
 }];
