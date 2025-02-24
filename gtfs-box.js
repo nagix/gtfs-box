@@ -71,12 +71,36 @@ const SOURCES = [{
     bearing: 0,
     pitch: 60
 }, {
+    label: '秋葉バス (袋井)',
+    gtfsUrl: 'https://api.odpt.org/api/v4/files/odpt/AkihaBusService/AllLines.zip?date=current',
+    color: 'C65C5A',
+    zoom: 14,
+    center: [137.92604, 34.74094],
+    bearing: 0,
+    pitch: 60
+}, {
     label: '京福バス (福井)',
     gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/KeifukuBus/keifuku_rosen.zip?date=current',
     vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_KeifukuBus_keifuku_rosen_vehicle',
     color: '75191C',
     zoom: 14,
     center: [136.22333, 36.06156],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '京都市営バス (京都)',
+    gtfsUrl: 'https://api.odpt.org/api/v4/files/odpt/KyotoMunicipalTransportation/Kyoto_City_Bus_GTFS.zip?date=current',
+    color: '1C5622',
+    zoom: 14,
+    center: [135.75861, 34.98666],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '小豆島オリーブバス (小豆島)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/ShodoshimaOliveBus/AllLines.zip?date=current',
+    color: 'A1CE45',
+    zoom: 14,
+    center: [134.17208, 34.48901],
     bearing: 0,
     pitch: 60
 }, {
@@ -278,7 +302,7 @@ function setValues(index, options) {
         const source = SOURCES[index];
 
         gtfsUrlElement.value = source.gtfsUrl;
-        vehiclePositionUrlElement.value = source.vehiclePositionUrl;
+        vehiclePositionUrlElement.value = source.vehiclePositionUrl || '';
         colorElement.value = `#${source.color}`;
         zoomElement.value = source.zoom;
         latitudeElement.value = source.center[1];
@@ -298,10 +322,10 @@ function setValues(index, options) {
 }
 
 const selectElement = document.getElementById('select'),
-    custom = initialIndex >= 0 ? '' : '<option value="" selected>Custom</option>';
+    custom = initialIndex >= 0 ? '' : `<option value="" selected>Custom${options.dataSources[0].vehiclePositionUrl ? ' 🛜' : ''}</option>`;
 
 selectElement.innerHTML = custom + SOURCES.map(
-    (source, i) => `<option value="${i}"${i === initialIndex ? ' selected': ''}>${source.label}</option>`
+    (source, i) => `<option value="${i}"${i === initialIndex ? ' selected': ''}>${source.label}${source.vehiclePositionUrl ? ' 🛜' : ''}</option>`
 ).join('');
 selectElement.addEventListener('input', e => {
     setValues(numberOrDefault(e.target.value, undefined), options);
@@ -344,7 +368,7 @@ document.getElementById('load').addEventListener('click', e => {
     const index = selectElement.value,
         source = SOURCES[index],
         gtfsUrl = gtfsUrlElement.value,
-        vehiclePositionUrl = vehiclePositionUrlElement.value,
+        vehiclePositionUrl = vehiclePositionUrlElement.value || undefined,
         color = colorElement.value.slice(1).toUpperCase(),
         zoom = numberOrDefault(zoomElement.value, 14),
         latitude = numberOrDefault(latitudeElement.value, 35.6814),
