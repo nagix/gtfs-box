@@ -53,6 +53,14 @@ const SOURCES = [{
     bearing: 0,
     pitch: 60
 }, {
+    label: '大島バス (伊豆大島)',
+    gtfsUrl: 'https://api.odpt.org/api/v4/files/odpt/OshimaBus/AllLines.zip?date=current',
+    color: 'F6D45C',
+    zoom: 14,
+    center: [139.35285, 34.75181],
+    bearing: 0,
+    pitch: 60
+}, {
     label: '永井バス (前橋)',
     gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/NagaiTransportation/AllLines.zip?date=current',
     vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_NagaiTransportation_AllLines_vehicle',
@@ -71,8 +79,26 @@ const SOURCES = [{
     bearing: 0,
     pitch: 60
 }, {
+    label: '関越交通バス (渋川)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/Kan_etsuTransportation/AllLines.zip?date=current',
+    color: 'ED702D',
+    zoom: 14,
+    center: [139.00785, 36.49038],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '伊豆箱根バス (三島)',
+    gtfsUrl: 'https://api.odpt.org/api/v4/files/odpt/IzuhakoneBus/IZHB.zip?date=current',
+    vehiclePositionUrl: 'https://api.odpt.org/api/v4/gtfs/realtime/odpt_IzuhakoneBus_IZHB_vehicle',
+    color: '275BA1',
+    zoom: 14,
+    center: [138.91193, 35.12577],
+    bearing: 0,
+    pitch: 60
+}, {
     label: '秋葉バス (袋井)',
     gtfsUrl: 'https://api.odpt.org/api/v4/files/odpt/AkihaBusService/AllLines.zip?date=current',
+    vehiclePositionUrl: 'https://api.odpt.org/api/v4/gtfs/realtime/odpt_AkihaBusService_AllLines_vehicle',
     color: 'C65C5A',
     zoom: 14,
     center: [137.92604, 34.74094],
@@ -128,6 +154,14 @@ const SOURCES = [{
     color: 'E83330',
     zoom: 14,
     center: [131.22167, 34.0027],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'Tours Métropole Val de Loire (Tours, France)',
+    gtfsUrl: 'https://data.tours-metropole.fr/api/datasets/1.0/horaires-temps-reel-gtfsrt-reseau-filbleu-tmvl/alternative_exports/filbleu_gtfszip/',
+    color: '234D8C',
+    zoom: 14,
+    center: [0.69363, 47.39007],
     bearing: 0,
     pitch: 60
 }, {

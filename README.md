@@ -60,7 +60,9 @@ The source of the public transportation data in this app is the [Public Transpor
 - Aomori City, Aomori City Bus information, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Nagai Transportation Co., Ltd., Nagai Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Nippon Chuo Bus Co.,Ltd., Nippon Chuo Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
+- Kan-etsu Transportation Co.,Ltd., Kan-etsu Transportation Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Keifuku Bus Co., Ltd., Keifuku Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
+- Shodoshima Olive Bus, Shodoshima Olive Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Shimotsuidentetsu Corporation, Shimoden BUS, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Funaki Tetsudou Corporation, Funatetsu Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 
@@ -72,7 +74,9 @@ The source of the public transportation data in this app is the [Public Transpor
 - 青森市企業局交通部、青森市営バス路線情報、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 永井運輸株式会社、永井バス（永井運輸株式会社）、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 日本中央バス株式会社、日本中央バス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
+- 関越交通株式会社、関越交通バス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 京福バス株式会社、京福バス（路線バス）、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
+- 小豆島オリーブバス株式会社、小豆島オリーブバス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 下津井電鉄株式会社、下電バス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 船木鉄道株式会社、船鉄バス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 
