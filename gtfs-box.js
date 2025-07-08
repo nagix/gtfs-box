@@ -278,6 +278,136 @@ function numberOrDefault(value, defaultValue) {
     return isNaN(Number(value)) || isNaN(parseFloat(value)) ? defaultValue : +value;
 }
 
+class RouteControl {
+
+    constructor(options) {
+        const me = this;
+
+        me._onSelect = options.onSelect;
+        me._onChange = options.onChange;
+    }
+
+    getDefaultPosition() {
+        return 'top-left';
+    }
+
+    onAdd(map) {
+        const me = this;
+
+        me._map = map;
+
+        me._container = document.createElement('div');
+        me._container.className = 'mapboxgl-ctrl ctrl-group';
+        me._container.style.display = 'none';
+
+        me._element = document.createElement('div');
+        me._element.className = 'route-ctrl';
+        me._container.appendChild(me._element);
+
+        return me._container;
+    }
+
+    onRemove() {
+        const me = this;
+
+        me._container.parentNode.removeChild(me._container);
+        delete me._container;
+        delete me._map;
+    }
+
+    refresh(routes) {
+        const me = this,
+            container = me._container,
+            element = me._element,
+            height = () => container.classList.contains('expanded') ?
+                `min(${routes.length * 29 + 48}px, calc(100dvh - ${container.getBoundingClientRect().top + 56}px))` :
+                '';
+
+        if (routes.length === 0) {
+            container.style.display = 'none';
+            return;
+        }
+
+        container.style.display = 'block';
+        element.innerHTML = [
+            '<div class="route-header">',
+            '<div>',
+            `<div class="route-title">${routes[0].agency}</div>`,
+            `<div id="route-all" class="route-item-all checked">Select All</div>`,
+            '</div>',
+            '<div>',
+            '<div id="route-expand-button" class="route-expand-button"></div>',
+            '</div>',
+            '</div>',
+            '<div class="route-body">',
+            '<div class="route-content">',
+            '<div class="route-list">',
+            ...routes.map((route, i) => [
+                `<div id="route-${i}" class="route-item checked">`,
+                '<div class="route-item-label">',
+                `<span class="route-label" style="color: ${route.textColor || '#333'}; background-color: ${route.color || '#fff'};">`,
+                route.name || '&nbsp;&nbsp;&nbsp;',
+                '</span>',
+                '</div>',
+                '</div>'
+            ].join('')),
+            '</div>',
+            '</div>',
+            '</div>'
+        ].join('');
+
+        container.style.height = height();
+
+        document.getElementById('route-expand-button').addEventListener('click', () => {
+            container.classList.toggle('expanded');
+            container.style.height = height();
+        });
+        document.getElementById('route-all').addEventListener('click', e => {
+            if (e.target.classList.contains('checked')) {
+                e.target.classList.remove('checked');
+                for (let i = 0, ilen = routes.length; i < ilen; i++) {
+                    document.getElementById(`route-${i}`).classList.remove('checked');
+                }
+                me._onChange(routes.map(({ref}) => ref), false);
+            } else {
+                e.target.classList.remove('partial');
+                e.target.classList.add('checked');
+                for (let i = 0, ilen = routes.length; i < ilen; i++) {
+                    document.getElementById(`route-${i}`).classList.add('checked');
+                }
+                me._onChange(routes.map(({ref}) => ref), true);
+            }
+        });
+        for (let i = 0, ilen = routes.length; i < ilen; i++) {
+            const element = document.getElementById(`route-${i}`);
+
+            element.addEventListener('click', e => {
+                const checked = e.target.classList.toggle('checked');
+
+                if (document.querySelector('.route-item.checked')) {
+                    if (document.querySelector('.route-item:not(.checked)')) {
+                        document.getElementById('route-all').classList.remove('checked');
+                        document.getElementById('route-all').classList.add('partial');
+                    } else {
+                        document.getElementById('route-all').classList.remove('partial');
+                        document.getElementById('route-all').classList.add('checked');
+                    }
+                } else {
+                    document.getElementById('route-all').classList.remove('checked', 'partial');
+                }
+                me._onChange([routes[i].ref], checked);
+            });
+            element.addEventListener('mouseenter', () => {
+                me._onSelect(routes[i].ref);
+            });
+            element.addEventListener('mouseleave', () => {
+                me._onSelect();
+            });
+        }
+    }
+
+}
+
 const matchLang = location.search.match(/lang=(.*?)(?:&|$)/),
     matchIndex = location.search.match(/index=(.*?)(?:&|$)/),
     matchGtfsUrl = location.search.match(/gtfsurl=(.*?)(?:&|$)/),
@@ -385,7 +515,7 @@ document.getElementById('toggle').addEventListener('click', e => {
     }
 });
 configContainer.addEventListener('transitionend', e => {
-    map.map.resize();
+    map.getMapboxMap().resize();
 });
 
 document.getElementById('location').addEventListener('click', e => {
@@ -422,4 +552,67 @@ document.getElementById('load').addEventListener('click', e => {
         params = `gtfsurl=${encodeURIComponent(gtfsUrl)}${vehiclePositionUrl ? `&gtfsvpurl=${encodeURIComponent(vehiclePositionUrl)}` : ''}&gtfscolor=${color}#${zoom}/${latitude}/${longitude}/${bearing}/${pitch}`;
 
     window.location.href = `./?${langParam}${indexParam}${params}`;
+});
+
+const routeControl = new RouteControl({
+    onSelect: ref => {
+        if (ref) {
+            map.updateBusRouteHighlight(ref.gtfs, ref.routes);
+        } else {
+            map.updateBusRouteHighlight();
+        }
+    },
+    onChange: (refs, checked) => {
+        for (const {gtfs: gtfsId, routes} of refs) {
+            for (const routeId of routes) {
+                const route = map.gtfs.get(gtfsId).routeLookup.get(routeId);
+
+                if (checked) {
+                    delete route.hidden;
+                } else {
+                    route.hidden = true;
+                }
+            }
+        }
+        map.updateBusRouteVisibility();
+    }
+});
+
+map.on('load', () => {
+    let prevGtfsKeys = '';
+
+    setInterval(() => {
+        const gtfsKeys = [...map.gtfs.keys()].join(),
+            mbox = map.getMapboxMap();
+
+        if (prevGtfsKeys !== gtfsKeys) {
+            const routes = new Map();
+
+            if (!mbox.hasControl(routeControl)) {
+                mbox.addControl(routeControl);
+            }
+
+            for (const gtfs of map.gtfs.values()) {
+                for (const route of gtfs.routeLookup.values()) {
+                    const {shortName, longName, color, textColor} = route,
+                        name = shortName || longName,
+                        key = gtfs.agency + name;
+
+                    if (routes.has(key)) {
+                        routes.get(key).ref.routes.push(route.id);
+                    } else {
+                        routes.set(key, {
+                            agency: gtfs.agency,
+                            name,
+                            color,
+                            textColor,
+                            ref: {gtfs: gtfs.id, routes: [route.id]},
+                        });
+                    }
+                }
+            }
+            routeControl.refresh([...routes.keys()].sort().map(key => routes.get(key)));
+            prevGtfsKeys = gtfsKeys;
+        }
+    }, 1000);
 });
