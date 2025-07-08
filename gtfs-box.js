@@ -17,7 +17,7 @@ const SOURCES = [{
     bearing: 0,
     pitch: 60
 }, {
-    label: '京成トランジットバス (浦安)',
+    label: '京成バス千葉ウエスト塩浜営業所 (浦安)',
     gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/KeiseiTransitBus/AllLines.zip?date=current',
     vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_KeiseiTransitBus_AllLines_vehicle',
     color: 'CC0000',
@@ -53,6 +53,87 @@ const SOURCES = [{
     bearing: 0,
     pitch: 60
 }, {
+    label: '大利根交通バス (取手)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/OtoneKotsu/AllLines.zip?date=current',
+    color: 'C62D27',
+    zoom: 14,
+    center: [140.06325, 35.89513],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '台東区コミュニティバス (台東区)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/TokyoTaitoCity/megurinCCBY40.zip?date=current',
+    color: '851911',
+    zoom: 14,
+    center: [139.78132, 35.71378],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'コミュニティバス（江戸バス） (中央区)',
+    gtfsUrl: 'https://api.odpt.org/api/v4/files/odpt/TokyoChuoCity/Alldata.zip?date=current',
+    color: 'BA363C',
+    zoom: 14,
+    center: [139.7717, 35.67076],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '千代田区地域福祉交通「風ぐるま」 (千代田区)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/HitachiAutomobileTransportation/Chiyoda_ALLLINES.zip?date=current',
+    color: 'E0ACCB',
+    zoom: 14,
+    center: [139.75237, 35.69559],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '文京区コミュニティバス「Bーぐる」 (文京区)',
+    gtfsUrl: 'https://api.odpt.org/api/v4/files/odpt/HitachiAutomobileTransportation/AllLines.zip?date=current',
+    color: '346E5F',
+    zoom: 14,
+    center: [139.75189, 35.70788],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '北区コミュニティバス「Kバス」 (北区)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/HitachiAutomobileTransportation/KitaAllLines.zip?date=current',
+    color: 'D75C95',
+    zoom: 14,
+    center: [139.73684, 35.75458],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '杉並区グリーンスローモビリティ (杉並区)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/TokyoSuginamiCity/GreenSlowMobility.zip?date=current',
+    vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_TokyoSuginamiCity_GreenSlowMobility_vehicle',
+    color: '347E42',
+    zoom: 14,
+    center: [139.61865, 35.7042],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '東京都国分寺市地域バスぶんバス (国分寺市)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/KokubunjiCity/kokubunji_city_bunbus.zip?date=current',
+    color: '668E48',
+    zoom: 14,
+    center: [139.46925, 35.69658],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '国立市コミュニティバスくにっこ (国立市)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/KunitachiCity/kunitachi_city_kunikko.zip?date=current',
+    color: '377723',
+    zoom: 14,
+    center: [139.44103, 35.68385],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'ちょこバス (東大和市)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/HigashiyamatoCity/AllLines_CCBY4.zip?date=current',
+    color: '2C4D92',
+    zoom: 14,
+    center: [139.42589, 35.74553],
+    bearing: 0,
+    pitch: 60
+}, {
     label: '大島バス (伊豆大島)',
     gtfsUrl: 'https://api.odpt.org/api/v4/files/odpt/OshimaBus/AllLines.zip?date=current',
     color: 'F6D45C',
@@ -76,6 +157,15 @@ const SOURCES = [{
     color: 'D1AC4B',
     zoom: 14,
     center: [139.07263, 36.38314],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '上信観光バス (高崎)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/JoshinKankoBus/AllLines.zip?date=current',
+    vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_JoshinKankoBus_AllLines_vehicle',
+    color: 'C62D27',
+    zoom: 14,
+    center: [139.01161, 36.32221],
     bearing: 0,
     pitch: 60
 }, {
