@@ -436,8 +436,9 @@ class RouteControl {
                 `<div id="route-${i}" class="route-item checked">`,
                 '<div class="route-item-label">',
                 `<span class="route-label" style="color: ${route.textColor || '#333'}; background-color: ${route.color || '#fff'};">`,
-                route.name || '&nbsp;&nbsp;&nbsp;',
+                route.shortName || route.longName || '&nbsp;&nbsp;&nbsp;',
                 '</span>',
+                route.shortName && route.longName ? ` ${route.longName}` : '',
                 '</div>',
                 '</div>'
             ].join('')),
@@ -647,21 +648,19 @@ document.getElementById('load').addEventListener('click', e => {
 const routeControl = new RouteControl({
     onSelect: ref => {
         if (ref) {
-            map.updateBusRouteHighlight(ref.gtfs, ref.routes);
+            map.updateBusRouteHighlight(ref.gtfsId, ref.routeId);
         } else {
             map.updateBusRouteHighlight();
         }
     },
     onChange: (refs, checked) => {
-        for (const {gtfs: gtfsId, routes} of refs) {
-            for (const routeId of routes) {
-                const route = map.gtfs.get(gtfsId).routeLookup.get(routeId);
+        for (const {gtfsId, routeId} of refs) {
+            const route = map.gtfs.get(gtfsId).routeLookup.get(routeId);
 
-                if (checked) {
-                    delete route.hidden;
-                } else {
-                    route.hidden = true;
-                }
+            if (checked) {
+                delete route.hidden;
+            } else {
+                route.hidden = true;
             }
         }
         map.updateBusRouteVisibility();
@@ -676,32 +675,31 @@ map.on('load', () => {
             mbox = map.getMapboxMap();
 
         if (prevGtfsKeys !== gtfsKeys) {
-            const routes = new Map();
+            const routes = [];
 
             if (!mbox.hasControl(routeControl)) {
                 mbox.addControl(routeControl);
             }
-
             for (const gtfs of map.gtfs.values()) {
                 for (const route of gtfs.routeLookup.values()) {
-                    const {shortName, longName, color, textColor} = route,
-                        name = shortName || longName,
-                        key = gtfs.agency + name;
+                    const {id, shortName, longName, color, textColor} = route;
 
-                    if (routes.has(key)) {
-                        routes.get(key).ref.routes.push(route.id);
-                    } else {
-                        routes.set(key, {
-                            agency: gtfs.agency,
-                            name,
-                            color,
-                            textColor,
-                            ref: {gtfs: gtfs.id, routes: [route.id]},
-                        });
-                    }
+                    routes.push({
+                        agency: gtfs.agency,
+                        shortName,
+                        longName,
+                        color,
+                        textColor,
+                        ref: {gtfsId: gtfs.id, routeId: id}
+                    });
                 }
             }
-            routeControl.refresh([...routes.keys()].sort().map(key => routes.get(key)));
+            routeControl.refresh(routes.sort((a, b) => {
+                const nameA = (a.shortName + a.longName).toUpperCase(),
+                    nameB = (b.shortName + b.longName).toUpperCase();
+
+                return nameA < nameB ? -1 : nameA > nameB ? 1 : 0;
+            }));
             prevGtfsKeys = gtfsKeys;
         }
     }, 1000);
