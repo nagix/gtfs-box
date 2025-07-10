@@ -53,6 +53,14 @@ const SOURCES = [{
     bearing: 0,
     pitch: 60
 }, {
+    label: '秋田市マイタウン・バス、中心市街地循環バスぐるる (秋田)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/AkitaCity/AkitaCityBus.zip?date=current',
+    color: '285E17',
+    zoom: 14,
+    center: [140.12811, 39.71733],
+    bearing: 0,
+    pitch: 60
+}, {
     label: '大利根交通バス (取手)',
     gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/OtoneKotsu/AllLines.zip?date=current',
     color: 'C62D27',
@@ -98,6 +106,14 @@ const SOURCES = [{
     color: 'D75C95',
     zoom: 14,
     center: [139.73684, 35.75458],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: 'レイディアントシティ横濱 (金沢八景)',
+    gtfsUrl: 'https://api.odpt.org/api/v4/files/odpt/Daishinto/Radiantcity_Yokohama.zip?date=current',
+    color: '2C66F2',
+    zoom: 14,
+    center: [139.62049, 35.34223],
     bearing: 0,
     pitch: 60
 }, {
@@ -160,6 +176,24 @@ const SOURCES = [{
     bearing: 0,
     pitch: 60
 }, {
+    label: '群馬中央バス (前橋)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/GunmachuoBus/AllLines.zip?date=current',
+    vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_GunmachuoBus_AllLines_vehicle',
+    color: 'E6883C',
+    zoom: 14,
+    center: [139.07263, 36.38314],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '群馬バス (高崎)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/GunmaBus/AllLines.zip?date=current',
+    vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_GunmaBus_AllLines_vehicle',
+    color: 'D43131',
+    zoom: 14,
+    center: [139.01264, 36.32204],
+    bearing: 0,
+    pitch: 60
+}, {
     label: '上信観光バス (高崎)',
     gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/JoshinKankoBus/AllLines.zip?date=current',
     vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_JoshinKankoBus_AllLines_vehicle',
@@ -171,6 +205,7 @@ const SOURCES = [{
 }, {
     label: '関越交通バス (渋川)',
     gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/Kan_etsuTransportation/AllLines.zip?date=current',
+    vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_Kan_etsuTransportation_AllLines_vehicle',
     color: 'ED702D',
     zoom: 14,
     center: [139.00785, 36.49038],
@@ -217,6 +252,14 @@ const SOURCES = [{
     color: 'A1CE45',
     zoom: 14,
     center: [134.17208, 34.48901],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '赤磐市広域路線バス・市民バス (赤磐)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/AkaiwaCity/AllLines.zip?date=current',
+    color: 'EBA0C0',
+    zoom: 14,
+    center: [134.01976, 34.75544],
     bearing: 0,
     pitch: 60
 }, {
