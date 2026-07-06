@@ -53,8 +53,17 @@ const SOURCES = [{
     bearing: 0,
     pitch: 60
 }, {
+    label: '青森市コミュニティバス (青森)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/UrbanDevelopment_AomoriCity/AllLines.zip?date=current',
+    color: '4A9948',
+    zoom: 14,
+    center: [140.73501, 40.82824],
+    bearing: 0,
+    pitch: 60
+}, {
     label: '秋田市マイタウン・バス、中心市街地循環バスぐるる (秋田)',
-    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/AkitaCity/AkitaCityBus.zip?date=current',
+    gtfsUrl: 'https://api.odpt.org/api/v4/files/odpt/AkitaCity/AkitaCityBus.zip?date=current',
+    vehiclePositionUrl: 'https://api.odpt.org/api/v4/gtfs/realtime/odpt_AkitaCity_AkitaCityBus_vehicle',
     color: '285E17',
     zoom: 14,
     center: [140.12811, 39.71733],
@@ -155,6 +164,15 @@ const SOURCES = [{
     color: 'F6D45C',
     zoom: 14,
     center: [139.35285, 34.75181],
+    bearing: 0,
+    pitch: 60
+}, {
+    label: '上信ハイヤー (高崎)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/JoshinHire/AllLines.zip?date=current',
+    vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_JoshinHire_AllLines_vehicle',
+    color: '1D4A93',
+    zoom: 14,
+    center: [139.10563, 36.27328],
     bearing: 0,
     pitch: 60
 }, {
@@ -281,9 +299,18 @@ const SOURCES = [{
     bearing: 0,
     pitch: 60
 }, {
+    label: '土佐市ドラゴンバス (土佐)',
+    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/TosaCity/AllLines.zip?date=current',
+    vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_TosaCity_AllLines_vehicle',
+    color: '163C94',
+    zoom: 14,
+    center: [133.4251, 33.49573],
+    bearing: 0,
+    pitch: 60
+}, {
     label: '船鉄バス (宇部)',
-    gtfsUrl: 'https://api-public.odpt.org/api/v4/files/odpt/SentetsuBus/AllLines.zip?date=current',
-    vehiclePositionUrl: 'https://api-public.odpt.org/api/v4/gtfs/realtime/odpt_SentetsuBus_AllLines_vehicle',
+    gtfsUrl: 'https://api.odpt.org/api/v4/files/odpt/SentetsuBus/AllLines.zip?date=current',
+    vehiclePositionUrl: 'https://api.odpt.org/api/v4/gtfs/realtime/odpt_SentetsuBus_AllLines_vehicle',
     color: 'E83330',
     zoom: 14,
     center: [131.22167, 34.0027],

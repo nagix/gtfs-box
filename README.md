@@ -58,7 +58,7 @@ The source of the public transportation data in this app is the [Public Transpor
 - Keisei Transit Bus Co.,Ltd., KEISEI TRANSIT BUS, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Hakodate City Enterprise Department, Hakodate City Tram, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Aomori City, Aomori City Bus information, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
-- Akita City, Akita City (My-Town Bus・GURURU Bus), [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
+- Aomori City, Aomori City Community Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Otone Kotsu Jidousha Co.,Ltd., Otone Kotsu Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Taito City Office, Taito City Community Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Hitachi Motor Transportation Co. Ltd., Tokyo Chiyoda City Community Bus "KAZAGURUMA", [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
@@ -67,6 +67,7 @@ The source of the public transportation data in this app is the [Public Transpor
 - Kokubunji-city, Kokubunji city area bus "bun bus", [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Kunitachi-city Road Traffic Division, Kunitachi City Community Bus "Kunikko", [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Higashiyamato City Hall, Higashiyamato City Community Bus "Choco Bus", [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
+- Joshin-hire Corporation, Gururin Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Nagai Transportation Co., Ltd., Nagai Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Nippon Chuo Bus Co.,Ltd., Nippon Chuo Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Gunmachuo-bus Corporation, Gunmachuo Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
@@ -75,8 +76,7 @@ The source of the public transportation data in this app is the [Public Transpor
 - Kan-etsu Transportation Co.,Ltd., Kan-etsu Transportation Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Keifuku Bus Co., Ltd., Keifuku Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 - Shodoshima Olive Bus, Shodoshima Olive Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
-- Shimotsuidentetsu Corporation, Shimoden BUS, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
-- Funaki Tetsudou Corporation, Funatetsu Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
+- Tosashi, Tosa City Dragon Bus, [Creative Commons License Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.en)
 
 本アプリケーションが利用する公共交通データは、[公共交通オープンデータセンター](https://www.odpt.org\" )において提供されるものです。公共交通事業者により提供されたデータを元にしていますが、必ずしも正確・完全なものとは限りません。本アプリケーションの表示内容について、公共交通事業者への直接の問合せは行わないでください。
 
@@ -84,7 +84,7 @@ The source of the public transportation data in this app is the [Public Transpor
 - 京成トランジットバス株式会社、京成トランジットバス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 函館市企業局、函館市電、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 青森市企業局交通部、青森市営バス路線情報、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
-- 秋田市、秋田市マイタウン・バス、中心市街地循環バスぐるる、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
+- 青森市、青森市コミュニティバス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 大利根交通自動車株式会社、大利根交通バス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 台東区、台東区コミュニティバス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 日立自動車交通株式会社、千代田区地域福祉交通「風ぐるま」、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
@@ -93,6 +93,7 @@ The source of the public transportation data in this app is the [Public Transpor
 - 国分寺市、東京都国分寺市地域バスぶんバス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 国立市道路交通課、国立市コミュニティバスくにっこ、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 東大和市、東大和市コミュニティバス「ちょこバス」、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
+- 上信ハイヤー株式会社、高崎市内循環バスぐるりん、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 永井運輸株式会社、永井バス（永井運輸株式会社）、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 日本中央バス株式会社、日本中央バス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 群馬中央バス株式会社、群馬中央バス株式会社、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
@@ -101,8 +102,7 @@ The source of the public transportation data in this app is the [Public Transpor
 - 関越交通株式会社、関越交通バス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 京福バス株式会社、京福バス（路線バス）、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 - 小豆島オリーブバス株式会社、小豆島オリーブバス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
-- 下津井電鉄株式会社、下電バス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
-- 船木鉄道株式会社、船鉄バス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
+- 土佐市、土佐市ドラゴンバス、[クリエイティブ・コモンズ・ライセンス表示 4.0 国際 (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/deed.ja)
 
 ## License / ライセンス
 
