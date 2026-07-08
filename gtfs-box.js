@@ -577,7 +577,8 @@ const matchLang = location.search.match(/lang=(.*?)(?:&|$)/),
     matchHash = location.hash.match(/[^\d\.\-]*([\d\.\-]*)\/?([\d\.\-]*)\/?([\d\.\-]*)\/?([\d\.\-]*)\/?([\d\.\-]*)/),
     options = {
         container: 'map',
-        dataUrl: 'data',
+        dataSources: [],
+        dataUrl: undefined,
         accessToken: 'pk.eyJ1IjoibmFnaXgiLCJhIjoiY201emxlbGhkMDRqYjJxc2IzMnF0dzk5aCJ9.OxzbAxJoC_Myy13ypJ4EeA',
         searchControl: false,
         modeControl: false,
@@ -605,6 +606,7 @@ if (matchHash[5]) {
 }
 if (matchGtfsUrl && matchGtfsColor) {
     options.dataSources = [{
+        id: 'gtfs',
         gtfsUrl: decodeURIComponent(matchGtfsUrl[1]),
         vehiclePositionUrl: matchVehiclePositionUrl ? decodeURIComponent(matchVehiclePositionUrl[1]) : undefined,
         color: `#${decodeURIComponent(matchGtfsColor[1])}`
@@ -725,7 +727,7 @@ const routeControl = new RouteControl({
     },
     onChange: (refs, checked) => {
         for (const {gtfsId, routeId} of refs) {
-            const route = map.gtfs.get(gtfsId).routeLookup.get(routeId);
+            const route = map.gtfs.get(gtfsId).routes.get(routeId);
 
             if (checked) {
                 delete route.hidden;
@@ -751,7 +753,7 @@ map.on('load', () => {
                 mbox.addControl(routeControl);
             }
             for (const gtfs of map.gtfs.values()) {
-                for (const route of gtfs.routeLookup.values()) {
+                for (const route of gtfs.routes.getAll()) {
                     const {id, shortName, longName, color, textColor} = route;
 
                     routes.push({
